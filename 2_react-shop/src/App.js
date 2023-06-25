@@ -1,8 +1,11 @@
 import OrderPage from "./pages/Order/OrderPage";
+import { OrderContextProvider } from "./contexts/OrderContext";
 function App() {
   return (
     <div>
-      <OrderPage />
+      <OrderContextProvider>
+        <OrderPage />
+      </OrderContextProvider>
     </div>
   );
 }

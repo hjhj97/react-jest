@@ -1,10 +1,10 @@
 import React from "react";
 
-function Options({ name }) {
+function Options({ name, updateItemCountFn }) {
   return (
     <form>
-      <input type="checkbox" id={`${name} option`} />
-      <label htmlFor={`${name} option`}>&nbsp;{name}</label>
+      <input type="checkbox" id={name} onChange={(e) => updateItemCountFn(name, e.target.checked ? 1 : 0)} />
+      <label htmlFor={name}>&nbsp;{name}</label>
     </form>
   );
 }
