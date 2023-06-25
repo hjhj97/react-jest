@@ -62,9 +62,6 @@ describe("total price", () => {
     const total = screen.getByText("Total Price :", { exact: false });
     expect(total).toHaveTextContent("0");
 
-    const americaInput = await screen.findByRole("spinbutton", {
-      name: "America",
-    });
     const insuranceCheckbox = await screen.findByRole("checkbox", {
       name: /insurance/i,
     });
